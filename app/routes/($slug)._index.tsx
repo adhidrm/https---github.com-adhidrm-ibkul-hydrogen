@@ -7,6 +7,7 @@ import {
 } from '@builder.io/sdk-react';
 import type { LoaderFunctionArgs } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
+import React from 'react';
 
 const apiKey = process.env.BUILDER_IO_API_KEY || 'default-api-key';
 
@@ -45,5 +46,6 @@ export default function Page() {
   const { page } = useLoaderData<typeof loader>();
 
   // Render the page content from Builder.io
-  return <Content model="page" apiKey={apiKey} content={page} />;
+//   return <Content model="page" apiKey={apiKey} content={page} />;
+return <Content model="page" apiKey={apiKey} content={page as BuilderContent} />;
 }
