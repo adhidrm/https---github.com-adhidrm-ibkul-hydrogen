@@ -8,7 +8,7 @@ import {
 import type { LoaderFunctionArgs } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 
-const apiKey = process.env.BUILDER_IO_API_KEY;
+const apiKey = process.env.BUILDER_IO_API_KEY || 'default-api-key';
 
 export const loader = async ({ params, request }: LoaderFunctionArgs) => {
   try {
