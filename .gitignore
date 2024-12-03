@@ -6,3 +6,7 @@ node_modules
 /.mf
 .env
 .shopify
+/.history
+/.github
+/.npmrc
+.gitignore
