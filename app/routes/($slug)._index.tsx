@@ -11,12 +11,7 @@ import { useLoaderData } from '@remix-run/react';
 import React from 'react';
 import { BuilderContent } from '@builder.io/sdk-react/edge';
 
-// const apiKey = process.env.BUILDER_IO_API_KEY || 'default-api-key';
-if (!process.env.BUILDER_IO_API_KEY) {
-	throw new Error('Missing BUILDER_IO_API_KEY');
-  }
-  const apiKey = process.env.BUILDER_IO_API_KEY;
-  
+const apiKey = process.env.BUILDER_IO_API_KEY || 'default-api-key';
 
 export const loader = async ({ params, request }: LoaderFunctionArgs) => {
   try {
