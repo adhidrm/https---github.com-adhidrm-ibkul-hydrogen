@@ -51,5 +51,5 @@ export default function Page() {
 
   // Render the page content from Builder.io
 //   return <Content model="page" apiKey={apiKey} content={page} />;
-return <Content model="page" apiKey={apiKey} content={page as BuilderContent} />;
+return <Content model="headless-page" apiKey={apiKey} content={page as BuilderContent} />;
 }
